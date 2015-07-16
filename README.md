@@ -1,5 +1,5 @@
 # infotextures
-Use the texture of a shape, instead of its colour, to communicate its significance.
+Use texture to express significance.
 
 see demo:
 http://corinedwards.github.io/infotextures/
