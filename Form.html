@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        color: blue;
+        font-family: sans-serif;
+      }
+      body {
+        padding: 1em;
+        font-size: 14pt;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
+      }
+      input{
+        border:none;
+        padding:0.5em 0.5em 1em 0;
+        margin-bottom:em;
+        font-size:14pt;
+        color:blue;
+        width:100%;
+      }
+      form div{
+        border:solid 1px blue;
+        padding:0.5em 1em 0.5em 0.5em;
+        margin:1em 0;
+        width:300px;
+      }
+     label{
+        font-weight:100;
+        display:block;
+      }
+      button{
+        display:block;
+        margin-top:1em;
+        font-size:14pt;
+        padding:0.5em;
+        background:none;
+        border:solid 1px blue;
+      }
+      input:invalid{
+        background:url(hazard.svg);
+        background-position:bottom left;
+        background-repeat:repeat-x;
+        background-size:0.75em;
+      }
+      input:valid{
+        background:url(neutral.svg);
+        background-position:bottom;
+        background-repeat:repeat-x;
+        background-size:0.75em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Infotextures</h1>
+      <h2>Form validation demo</h2>
+      <form>
+        <div>
+          <label for="name">name</label>
+          <input type="text" name="fname"  autocomplete="off">
+        </div>
+        <div>
+          <label for="email">email</label>
+          <input type="email" name="femail" required autocomplete="off">
+        </div>
+        <div>
+          <label for="website">website</label>
+          <input type="url" name="fwebsite" required autocomplete="off">
+        </div>
+        <button type="reset" value="Clear">reset</button>
+      </form>
+    </div>
+  </body>
+</html>
