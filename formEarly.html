@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+ <style>
+      *{    
+        margin:0;
+        padding:0;
+        color:blue;
+        font-family:sans-serif;
+      }
+      body{
+        padding:1em;
+        font-size:14pt;
+      }
+      ul{
+        list-style-position: inside;
+      }
+      header{
+        padding-bottom:1em;
+      }
+      header svg{
+        height:0;
+      }
+      section svg{
+        overflow:hidden;
+        width:100%;
+        height:41px;
+      }
+      svg pattern{
+        fill:none;
+        stroke-width:1px;
+        stroke:blue;
+      }
+      header{
+        
+      }
+      section{
+        width:320px;
+        border:solid 1px;
+        padding:1em;
+        margin-bottom:1em;
+      }
+      section div p{
+        padding-top:1em;
+        margin-bottom:2em;
+        border-top:none;
+      }
+      .container-hat{
+        height:41px;
+      }
+      input.field{font-size:18pt;width:400px;border:solid 1px red;}
+    </style>
+  </head>
+<body>
+<header>
+   <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>          
+          <pattern id="neutral" x="0" y="1" height="50" width="40" patternTransform="translate(0,0)" patternUnits="userSpaceOnUse">
+           <path   d="{{textures.flat}}">
+               <animate 
+                attributeName="d" 
+                dur="1s" 
+                repeatCount="indefinite" 
+                values="{{textures.flat}};
+                              {{textures.sawtooth}};
+                              {{textures.flat}};" />
+           </path>
+          </pattern>
+          <pattern id="gentle" x="0" y="0" height="41" width="40" patternTransform="translate(0,0)" patternUnits="userSpaceOnUse">
+            <animateTransform
+                        attributeName="patternTransform"
+                        begin="0s"
+                        dur="2s"
+                        type="translate"
+                        from="0,0"
+                        to="40,0"
+                        repeatCount="5"
+            />
+            <path d="M0,40C10,40 10,20 20,20C30,20 30,40 40,40"/>
+          </pattern>
+          <pattern id="pasag" x="0" y="0" height="41" width="40" patternTransform="translate(0,0)" patternUnits="userSpaceOnUse">
+
+            <path d="M0,40C0,20 20,20 20,20C20,20 40,20 40,40"  />
+          </pattern>
+          <pattern id="hazard" x="0" y="0" height="40" width="40" patternTransform="translate(0,0)" patternUnits="userSpaceOnUse">
+
+            <path d="M0,40C0,40 20,20 20,20C20,20 40,40 40,40" />
+          </pattern>          
+
+        </defs>
+      </svg>
+    </header>
+<h2>Email validation example</h2>
+     
+<form  ng-app="myApp"  ng-controller="validateCtrl"
+name="myForm" novalidate>
+
+<p>
+  <input class="field" type="email" name="email" ng-model="email" required>
+  <div class="container-hat">
+    <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300">
+      <rect x="0" y="0" height="50" width="100%"  style="fill: url(#neutral);" />
+      <p id="demo"></p>
+    </svg>
+    <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300">
+ <path   d="{{textures.flat}}">
+               <animate 
+                attributeName="d" 
+                dur="1s" 
+                repeatCount="indefinite" 
+                values="{{textures.flat}};
+                              {{textures.sawtooth}};
+                              {{textures.flat}};" />
+           </path>
+
+    </svg>
+  </div>
+  <span ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300">
+<path d="{{textures.sawtooth}}" />
+    </svg>nope</span>
+  </span>
+</p>
+
+<!-- <p>
+  <input type="submit"
+  ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+  myForm.email.$dirty && myForm.email.$invalid">
+</p>
+ -->
+</form>
+
+<script>
+var textures={flat:'M0,20l20,0L40,20',sawtooth:'M0,20l20,20l20-20'};
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.email = 'corinedwards@gmail.com';
+});
+
+document.getElementById("demo").innerHTML = textures;
+</script>
+
+
+<!-- cray illy dumps
+
+
+<svg version="1.1"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   x="0px" y="0px" width="41px" height="21px" viewBox="0 0 41 21" enable-background="new 0 0 41 21" xml:space="preserve">
+<defs>
+</defs>
+<path id="Layer1_1_" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.4142" d="
+  M0.5,20.5l20-20l20,20"/>
+</svg>
+
+
+
+<svg version="1.1"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   x="0px" y="0px" width="41px" height="1px" viewBox="0 0 41 1" enable-background="new 0 0 41 1" xml:space="preserve">
+<defs>
+</defs>
+<path id="Layer1_1_" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.4142" d="
+  M0.5,0.5h20h20"/>
+</svg>
+
+
+
+ -->
+
+
+</body>
+</html>
