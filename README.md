@@ -1,5 +1,8 @@
 # infotextures
 Use texture to express urgency.
 
-see demo:
+Static demo:
 http://corinedwards.github.io/infotextures/
+
+Form valudation demo:
+http://corinedwards.github.io/infotextures/formValidation.html
