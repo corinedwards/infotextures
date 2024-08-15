@@ -1,153 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Infotextures</title>
-		<style>
-			*{
-				
-				margin:0;
-				padding:0;
+<html>
+  <head>
+    <style>
+      * {
+        color: blue;
+        font-family: sans-serif;
+        font-size: 14pt;
+        margin:0;
+        padding:0;
+      }
+      sup{
+        font-size:7pt;
+      }
+      body {
+        padding: 1em;
+      }
+      body div{
+        margin:auto;
+        width:300px;
+      }
+      form{
+        border:solid 1px blue;
+        padding:1em 1.5em 1em 1em;
+        margin:1em 0;
+        width:300px;
+      }
+      label{
+        display:none;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
+      }
+      input{
+        border:none;
+        padding:0.5em 0.5em 1em 0;
+        margin-bottom:1em;
+        width:100%;
+        height:2em;
+        font-weight:600;
+      }
+      @-webkit-keyframes fieldFocus {
+        from { background-position:10px 2em; }
+        to { background-position:50px 2em;}
+      }
+      input:focus{ 
+        -webkit-animation: fieldFocus 0.4s cubic-bezier(0.5, 0, 0.5, 1) alternate 2;
+        background-repeat:repeat-x;
+        background-size:20px;
+      }
 
-			}
-			body{
-				padding:1em;
-				font-family:sans-serif;
-				color:blue;
-				font-size:14pt;
-			}
-			ul{
-				list-style-position: inside;
-			}
 
-			svg{
-				
-				overflow:hidden;
-				width:100%;
-				/**/
-				height:41px;
-			}
-			svg pattern{
-				fill:none;
-				stroke-width:1px;
-				stroke:blue;
-			}
-			header{
-				padding-bottom:2em;
-			}
-			section{
-				width:320px;
-			}
-			section div p{
-				padding-top:1em;
-				margin-bottom:2em;
-				/*border:solid 1px blue;*/
-				border-top:none;
-			}
-			.container-hat{
-				height:41px;
-			}
-		</style>
-	</head>
-	<body>
-	<header>
-		 <h1>Infotextures</h1>
-		  <p>Use texture to express significance.</p>
-	</header>
-	<section>
-		<div>
-			<h2>Gentle reminder</h2>
-			<div class="container-hat">
-				<svg  xmlns="http://www.w3.org/2000/svg"
-			      xmlns:xlink="http://www.w3.org/1999/xlink" >
-					<defs>
-						<pattern id="gentle" x="0" y="0" height="41" width="40" patternTransform="translate(0,0)" patternUnits="userSpaceOnUse">
-							<animateTransform
-							            attributeName="patternTransform"
-							            begin="0s"
-							            dur="2s"
-							            type="translate"
-							            from="0,0"
-							            to="40,0"
-							            repeatCount="5"
-							            keyTimes="0; 1"
-							            keySplines="0 1 0.75 1"
-							            calcMode="spline"
-							/>
-							<path d="M0,40C10,40 10,20 20,20C30,20 30,40 40,40"/>
-						</pattern>
-					</defs>
-					<rect x="0" y="0" height="41" width="2000" style="fill: url(#gentle);" />
-				</svg>
-			</div>
-			<div class="container-body">
-
-				<p>A Gentle Reminder is the second full-length album from American indie rock band, The Jealous Sound. Released after a long hiatus, the recording is the band's second full-length album and followed the 2003 debut album, Kill Them with Kindness.</p>
-			</div>
-		</div>
-		<div>
-			<h2>Passive aggressive</h2>
-			<div class="container-hat">
-				<svg  xmlns="http://www.w3.org/2000/svg"
-			      xmlns:xlink="http://www.w3.org/1999/xlink" width="300">
-					<defs>
-						<pattern id="pasag" x="0" y="0" height="41" width="40" patternTransform="translate(0,0)" patternUnits="userSpaceOnUse">
-							<animateTransform
-							            attributeName="patternTransform"
-							            begin="0s"
-							            dur="2s"
-							            type="translate"
-							            from="0,0"
-							            to="40,0"
-							            repeatCount="5"
-							            keyTimes="0; 1"
-							            keySplines="0 1 0.75 1"
-							            calcMode="spline"
-							/>
-							<path d="M0,40C0,20 20,20 20,20C20,20 40,20 40,40"  />
-						</pattern>
-					</defs>
-					<rect x="0" y="0" height="41" width="100%" style="fill: url(#pasag);" />
-				</svg>
-			</div>
-				<p>of or denoting a type of behavior or personality characterized by indirect resistance to the demands of others and an avoidance of direct confrontation, as in procrastinating, pouting, or misplacing important materials.</p>
-		</div>
-		<div>
-			<h2>Hazard</h2>
-			<div class="container-hat">
-				<svg  xmlns="http://www.w3.org/2000/svg"
-			      xmlns:xlink="http://www.w3.org/1999/xlink" width="300">
-					<defs>
-						<pattern id="hazard" x="0" y="0" height="41" width="40" patternTransform="translate(0,0)" patternUnits="userSpaceOnUse">
-							<animateTransform
-							            attributeName="patternTransform"
-							            begin="0s"
-							            dur="2s"
-							            type="translate"
-							            from="0,0"
-							            to="40,0"
-							            repeatCount="5"
-							            keyTimes="0; 1"
-							            keySplines="0 1 0.75 1"
-							            calcMode="spline"
-							/>
-							<path d="M0,40C0,40 20,20 20,20C20,20 40,40 40,40" />
-						</pattern>
-					</defs>
-					<rect x="0" y="0" height="41" width="100%"  style="fill: url(#hazard);" />
-				</svg>
-			</div>
-			<div class="container-body">
-				
-				<p>A hazard is a situation that poses a level of threat to life, health, property, or environment. </p>
-			</div>
-		</div>
-		<footer>
-		      <ul>
-		      	<li><a href="https://github.com/corinedwards/infotextures" >View on GitHub</a></li>
-		      	<li><a href="https://github.com/corinedwards/infotextures/zipball/master">Download .zip</a></li>
-		      	<li><a href="https://github.com/corinedwards/infotextures/tarball/master">Download .tar.gz</a></li>
-		      </ul>
-		</footer>
-	</body>
+      input:invalid{
+        background:url(hazard.svg);
+        background-position:10px 2em;
+        background-repeat:repeat-x;
+        background-size:20px;
+      }  
+      input:optional{
+        background:url(gentle.svg);
+        background-position:10px 2em;
+        background-repeat:repeat-x;
+        background-size:20px;
+      }        
+      input:valid{
+        background:url(neutral.svg);
+        background-position:10px 2em ;
+        background-repeat:repeat-x;
+        background-size:20px;
+      }            
+      ::-webkit-input-placeholder{
+        color:blue;
+        font-weight:100;
+      }      
+      textarea{
+        border:none;
+        width:300px;
+      }
+      textarea:required{
+        background:url(gentle.svg);
+        background-position:10px 90%;
+        background-repeat:repeat-x;
+        background-size:20px;
+      } 
+      textarea:valid{
+        background:url(neutral.svg);
+        background-position:10px  90%;
+        background-repeat:repeat-x;
+        background-size:20px;
+      }        
+      @-webkit-keyframes textareaFocus {
+        from { background-position:10px 90%; }
+        to { background-position:50px 90%;}
+      }
+      textarea:focus{
+        -webkit-animation:textareaFocus 0.6s cubic-bezier(0.5, 0, 0.5, 1) alternate infinite;
+      }
+      button{
+        display:block;
+        margin-top:1em;
+        background:none;
+        border:solid 1px blue;
+        padding:0.5em;
+      }
+      @-webkit-keyframes buttonFocus {
+        from { -webkit-transform: rotate(4deg); }
+        to { -webkit-transform: rotate(-4deg);}
+      }
+      button:focus{
+        -webkit-animation: buttonFocus 0.4s  cubic-bezier(0.5, 0, 0.5, 1) alternate infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+     <h1>Infotextures</h1>
+      <p>Experiments in expressing significance through texture.</p>
+      <aside>
+          <form>
+            <div>
+              <label for="name">first name</label>
+              <input placeholder="first name" type="text" name="firstName"  required />
+            </div>        
+            <div>
+              <label for="name">last name</label>
+              <input placeholder="last name" type="text" name="lastName"  required />
+            </div>
+            <div>
+              <label for="email">email</label>
+              <input placeholder="email" type="email" name="email" required />
+            </div>
+            <button type="reset" value="Clear">reset</button>
+          </form>
+          <p><sup>Optimised for webkit soz :(</sup></p>
+      </aside>
+    </div>
+  </body>
 </html>
